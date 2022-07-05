@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <link rel = "stylesheet" href="./css/style_login.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    </head>
+    
+    <body background="./images/bg.jpg">
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+        <script src="./javascript/Validations.js"></script>
+        
+        <div class="main">
+
+            <div class="content">
+
+                <div class="description">
+                    <h1>Welcome,<br>Login To Continue</h1>
+                    <p>Not a Member yet?<br></p>
+                    <button class="joinBtn" onclick=" document.location='index.html' ">Join Us</button>
+                </div>
+
+                <div class="loginForm" >
+
+                    <form action="#" autocomplete="off" onsubmit ="return verifyPassword()">
+                        <img src="https://www.certifiedfinancialguardian.com/images/blog-wp-login.png">
+                        <p class="member">Already a member</p>
+                        <ion-icon class="icons" name="person-outline" item-left></ion-icon>
+                        <input type="email" id="username" placeholder="Email" autocomplete="off" required="required" /><br>
+
+                        <ion-icon class="icons"name="lock-closed-outline"></ion-icon>
+                        <input type="password" id="password" placeholder="Password"   autocomplete="off" required="required" />
+                                   
+                        
+                        <p class="forgot">
+                            <a href="#">Forgot password?</a>
+                        </p>
+                        <button class="loginBtn" type="submit" >Login</button>
+                        
+                        <p class="or">-- or --</p>
+    
+                        <p class="loginWith">Login With</p>
+    
+                        <div class="login_icons">
+                            <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-yahoo"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        </div>
+                    </form>
+    
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

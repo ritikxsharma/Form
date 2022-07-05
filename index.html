@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SignUp Page</title>
+        <link rel = "stylesheet" href="./css/style_index.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    
+    <body background="./images/bg.jpg">
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+        <script src="./javascript/Validations.js"></script>
+        <div class="main">
+
+            <div class="content">
+
+                <div class="description">
+                    <h1>Welcome,</h1>
+                    <p>Already a Member?<br></p>
+                    <button class="signinBtn" onclick=" document.location='login.html' ">Sign in</button>
+                </div>
+
+                <div class="signupForm" >
+
+                    <!-- <form action="process.php" method="post" autocomplete="off" > -->
+                        <form action="#" autocomplete="off" ></form>
+                        <p class="new_user">New User</p>
+
+                        <ion-icon class="icons" name="person-outline"></ion-icon>
+                        <input type="text" name="fullname" id="fullname" onkeyup="return chckString()" placeholder="Full Name" autocomplete="off" required="required"><br>
+                    
+                        <ion-icon class="icons" name="calendar-outline"></ion-icon>
+                        <input type="date" name="dob" style="color-scheme: dark;" id="dob" autocomplete="off" required="required"/><br>
+
+                        <input type="radio" name="gender" style="height: 35px; width: 30px ;" id="gender" />
+                        <ion-icon class="radio-icons" name="man-outline"></ion-icon>
+
+                        <input type="radio" name="gender" style="height: 35px; width: 30px ;" id="gender" />
+                        <ion-icon class="radio-icons" name="woman-outline"></ion-icon>
+                        
+                        <input type="radio" name="gender" style="height: 35px; width: 30px ;" id="gender" />
+                        <ion-icon class="radio-icons" name="transgender-outline"></ion-icon><br>
+
+                        <ion-icon class="icons" name="mail-outline"></ion-icon>
+                        <input type="email" name="email" id="email" placeholder="Email" autocomplete="off" required="required"/><br>
+
+                        <ion-icon class="icons" name="call-outline"></ion-icon>
+                        <input type="tel" name="mobile_number" id="mobile" placeholder="Mobile Number"  pattern="[0-9]{10}"  autocomplete="off" /><br>
+                        
+                        <ion-icon class="icons"name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="password" id="pwd" placeholder="Password" autocomplete="off" onchange="return verifyConstraint()" onkeyup=" return passwordMatch();" autocomplete="off" required="required" />
+                        <ion-icon class="eye" id="eye1" name="eye-outline" onclick="togglePassword(1)"></ion-icon> <br>
+
+                        <ion-icon class="icons" id="cnf_pwd_icon" name="lock-open-outline" ></ion-icon>
+                        <input type="password" name="confirm_password" id="cnf_pwd" placeholder="Confirm Password" autocomplete="off" onkeyup="return passwordMatch()" autocomplete="off" required="required" />
+                        <ion-icon class="eye" id="eye2" name="eye-outline" onclick="togglePassword(2)"></ion-icon>
+
+                        
+                        <button class="signupBtn" type="submit" onclick="return submitCheck(); return allLetter();" >Sign up</button>
+                        
+
+                        <p class="or">-- or --</p>
+
+                        <p class="loginWith">Login With</p>
+
+                        <div class="login_icons">
+                            <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-yahoo"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
