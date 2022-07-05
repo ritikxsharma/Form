@@ -80,6 +80,12 @@ function submitCheck() {
       document.getElementById("email").focus();
       return false;
    }
+
+   else if ( !(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("email").value)))
+   {
+     alert("Enter a valid email address");
+      return false;
+   }
    
    else if(document.getElementById("pwd").value == ""){
       alert("Enter Password");
@@ -115,4 +121,14 @@ function chckString()
       alert('Please input alphabet characters only');
       return false;
    }
+}
+
+function ValidateEmail() 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("email").value))
+  {
+    return (true)
+  }
+    alert("You have entered an invalid email address!")
+    return (false)
 }
